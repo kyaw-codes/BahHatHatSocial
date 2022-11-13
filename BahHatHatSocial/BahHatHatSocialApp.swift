@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct BahHatHatSocialApp: App {
+    @StateObject var loginVM = LoginVM()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginView()
+                .environmentObject(loginVM)
         }
     }
 }

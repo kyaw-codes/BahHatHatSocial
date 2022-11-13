@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C87C1ABC292136DD0038CAB1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87C1ABB292136DD0038CAB1 /* LoginView.swift */; };
+		C87C1ABE292136F70038CAB1 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87C1ABD292136F70038CAB1 /* LoginVM.swift */; };
 		C8910B7C29209D8600435B32 /* BahHatHatSocialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8910B7B29209D8600435B32 /* BahHatHatSocialApp.swift */; };
-		C8910B7E29209D8600435B32 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8910B7D29209D8600435B32 /* ContentView.swift */; };
 		C8910B8029209D8800435B32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8910B7F29209D8800435B32 /* Assets.xcassets */; };
 		C8910B8329209D8800435B32 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8910B8229209D8800435B32 /* Preview Assets.xcassets */; };
 		C8910B8D29209D8800435B32 /* BahHatHatSocialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8910B8C29209D8800435B32 /* BahHatHatSocialTests.swift */; };
@@ -34,9 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C87C1ABB292136DD0038CAB1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		C87C1ABD292136F70038CAB1 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 		C8910B7829209D8600435B32 /* BahHatHatSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BahHatHatSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8910B7B29209D8600435B32 /* BahHatHatSocialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BahHatHatSocialApp.swift; sourceTree = "<group>"; };
-		C8910B7D29209D8600435B32 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C8910B7F29209D8800435B32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8910B8229209D8800435B32 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C8910B8829209D8800435B32 /* BahHatHatSocialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BahHatHatSocialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +73,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C87C1ABF29213E8C0038CAB1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C87C1ABB292136DD0038CAB1 /* LoginView.swift */,
+				C87C1ABD292136F70038CAB1 /* LoginVM.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		C87C1AC029213E930038CAB1 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C87C1AC129213EC60038CAB1 /* SignUp */,
+				C87C1ABF29213E8C0038CAB1 /* Login */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C87C1AC129213EC60038CAB1 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
 		C8910B6F29209D8600435B32 = {
 			isa = PBXGroup;
 			children = (
@@ -94,8 +121,8 @@
 		C8910B7A29209D8600435B32 /* BahHatHatSocial */ = {
 			isa = PBXGroup;
 			children = (
+				C87C1AC029213E930038CAB1 /* Core */,
 				C8910B7B29209D8600435B32 /* BahHatHatSocialApp.swift */,
-				C8910B7D29209D8600435B32 /* ContentView.swift */,
 				C8910B7F29209D8800435B32 /* Assets.xcassets */,
 				C8910B8129209D8800435B32 /* Preview Content */,
 			);
@@ -257,7 +284,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8910B7E29209D8600435B32 /* ContentView.swift in Sources */,
+				C87C1ABE292136F70038CAB1 /* LoginVM.swift in Sources */,
+				C87C1ABC292136DD0038CAB1 /* LoginView.swift in Sources */,
 				C8910B7C29209D8600435B32 /* BahHatHatSocialApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
