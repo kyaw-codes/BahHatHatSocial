@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C8910B7C29209D8600435B32 /* BahHatHatSocialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8910B7B29209D8600435B32 /* BahHatHatSocialApp.swift */; };
+		C8910B7E29209D8600435B32 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8910B7D29209D8600435B32 /* ContentView.swift */; };
+		C8910B8029209D8800435B32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8910B7F29209D8800435B32 /* Assets.xcassets */; };
+		C8910B8329209D8800435B32 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8910B8229209D8800435B32 /* Preview Assets.xcassets */; };
+		C8910B8D29209D8800435B32 /* BahHatHatSocialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8910B8C29209D8800435B32 /* BahHatHatSocialTests.swift */; };
+		C8910B9729209D8800435B32 /* BahHatHatSocialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8910B9629209D8800435B32 /* BahHatHatSocialUITests.swift */; };
+		C8910B9929209D8800435B32 /* BahHatHatSocialUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8910B9829209D8800435B32 /* BahHatHatSocialUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C8910B8929209D8800435B32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C8910B7029209D8600435B32 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C8910B7729209D8600435B32;
+			remoteInfo = BahHatHatSocial;
+		};
+		C8910B9329209D8800435B32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C8910B7029209D8600435B32 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C8910B7729209D8600435B32;
+			remoteInfo = BahHatHatSocial;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C8910B7829209D8600435B32 /* BahHatHatSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BahHatHatSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8910B7B29209D8600435B32 /* BahHatHatSocialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BahHatHatSocialApp.swift; sourceTree = "<group>"; };
+		C8910B7D29209D8600435B32 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C8910B7F29209D8800435B32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C8910B8229209D8800435B32 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C8910B8829209D8800435B32 /* BahHatHatSocialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BahHatHatSocialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8910B8C29209D8800435B32 /* BahHatHatSocialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BahHatHatSocialTests.swift; sourceTree = "<group>"; };
+		C8910B9229209D8800435B32 /* BahHatHatSocialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BahHatHatSocialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8910B9629209D8800435B32 /* BahHatHatSocialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BahHatHatSocialUITests.swift; sourceTree = "<group>"; };
+		C8910B9829209D8800435B32 /* BahHatHatSocialUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BahHatHatSocialUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C8910B7529209D8600435B32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8910B8529209D8800435B32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8910B8F29209D8800435B32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C8910B6F29209D8600435B32 = {
+			isa = PBXGroup;
+			children = (
+				C8910B7A29209D8600435B32 /* BahHatHatSocial */,
+				C8910B8B29209D8800435B32 /* BahHatHatSocialTests */,
+				C8910B9529209D8800435B32 /* BahHatHatSocialUITests */,
+				C8910B7929209D8600435B32 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C8910B7929209D8600435B32 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C8910B7829209D8600435B32 /* BahHatHatSocial.app */,
+				C8910B8829209D8800435B32 /* BahHatHatSocialTests.xctest */,
+				C8910B9229209D8800435B32 /* BahHatHatSocialUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C8910B7A29209D8600435B32 /* BahHatHatSocial */ = {
+			isa = PBXGroup;
+			children = (
+				C8910B7B29209D8600435B32 /* BahHatHatSocialApp.swift */,
+				C8910B7D29209D8600435B32 /* ContentView.swift */,
+				C8910B7F29209D8800435B32 /* Assets.xcassets */,
+				C8910B8129209D8800435B32 /* Preview Content */,
+			);
+			path = BahHatHatSocial;
+			sourceTree = "<group>";
+		};
+		C8910B8129209D8800435B32 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C8910B8229209D8800435B32 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C8910B8B29209D8800435B32 /* BahHatHatSocialTests */ = {
+			isa = PBXGroup;
+			children = (
+				C8910B8C29209D8800435B32 /* BahHatHatSocialTests.swift */,
+			);
+			path = BahHatHatSocialTests;
+			sourceTree = "<group>";
+		};
+		C8910B9529209D8800435B32 /* BahHatHatSocialUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C8910B9629209D8800435B32 /* BahHatHatSocialUITests.swift */,
+				C8910B9829209D8800435B32 /* BahHatHatSocialUITestsLaunchTests.swift */,
+			);
+			path = BahHatHatSocialUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C8910B7729209D8600435B32 /* BahHatHatSocial */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8910B9C29209D8800435B32 /* Build configuration list for PBXNativeTarget "BahHatHatSocial" */;
+			buildPhases = (
+				C8910B7429209D8600435B32 /* Sources */,
+				C8910B7529209D8600435B32 /* Frameworks */,
+				C8910B7629209D8600435B32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BahHatHatSocial;
+			productName = BahHatHatSocial;
+			productReference = C8910B7829209D8600435B32 /* BahHatHatSocial.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C8910B8729209D8800435B32 /* BahHatHatSocialTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8910B9F29209D8800435B32 /* Build configuration list for PBXNativeTarget "BahHatHatSocialTests" */;
+			buildPhases = (
+				C8910B8429209D8800435B32 /* Sources */,
+				C8910B8529209D8800435B32 /* Frameworks */,
+				C8910B8629209D8800435B32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C8910B8A29209D8800435B32 /* PBXTargetDependency */,
+			);
+			name = BahHatHatSocialTests;
+			productName = BahHatHatSocialTests;
+			productReference = C8910B8829209D8800435B32 /* BahHatHatSocialTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C8910B9129209D8800435B32 /* BahHatHatSocialUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8910BA229209D8800435B32 /* Build configuration list for PBXNativeTarget "BahHatHatSocialUITests" */;
+			buildPhases = (
+				C8910B8E29209D8800435B32 /* Sources */,
+				C8910B8F29209D8800435B32 /* Frameworks */,
+				C8910B9029209D8800435B32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C8910B9429209D8800435B32 /* PBXTargetDependency */,
+			);
+			name = BahHatHatSocialUITests;
+			productName = BahHatHatSocialUITests;
+			productReference = C8910B9229209D8800435B32 /* BahHatHatSocialUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C8910B7029209D8600435B32 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					C8910B7729209D8600435B32 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					C8910B8729209D8800435B32 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = C8910B7729209D8600435B32;
+					};
+					C8910B9129209D8800435B32 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = C8910B7729209D8600435B32;
+					};
+				};
+			};
+			buildConfigurationList = C8910B7329209D8600435B32 /* Build configuration list for PBXProject "BahHatHatSocial" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C8910B6F29209D8600435B32;
+			productRefGroup = C8910B7929209D8600435B32 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C8910B7729209D8600435B32 /* BahHatHatSocial */,
+				C8910B8729209D8800435B32 /* BahHatHatSocialTests */,
+				C8910B9129209D8800435B32 /* BahHatHatSocialUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C8910B7629209D8600435B32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8910B8329209D8800435B32 /* Preview Assets.xcassets in Resources */,
+				C8910B8029209D8800435B32 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8910B8629209D8800435B32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8910B9029209D8800435B32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C8910B7429209D8600435B32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8910B7E29209D8600435B32 /* ContentView.swift in Sources */,
+				C8910B7C29209D8600435B32 /* BahHatHatSocialApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8910B8429209D8800435B32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8910B8D29209D8800435B32 /* BahHatHatSocialTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8910B8E29209D8800435B32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8910B9729209D8800435B32 /* BahHatHatSocialUITests.swift in Sources */,
+				C8910B9929209D8800435B32 /* BahHatHatSocialUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C8910B8A29209D8800435B32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C8910B7729209D8600435B32 /* BahHatHatSocial */;
+			targetProxy = C8910B8929209D8800435B32 /* PBXContainerItemProxy */;
+		};
+		C8910B9429209D8800435B32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C8910B7729209D8600435B32 /* BahHatHatSocial */;
+			targetProxy = C8910B9329209D8800435B32 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C8910B9A29209D8800435B32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C8910B9B29209D8800435B32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C8910B9D29209D8800435B32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BahHatHatSocial/Preview Content\"";
+				DEVELOPMENT_TEAM = 3LGZY3S9Q5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kyawthemonkey.BahHatHatSocial;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C8910B9E29209D8800435B32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BahHatHatSocial/Preview Content\"";
+				DEVELOPMENT_TEAM = 3LGZY3S9Q5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kyawthemonkey.BahHatHatSocial;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C8910BA029209D8800435B32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3LGZY3S9Q5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kyawthemonkey.BahHatHatSocialTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BahHatHatSocial.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BahHatHatSocial";
+			};
+			name = Debug;
+		};
+		C8910BA129209D8800435B32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3LGZY3S9Q5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kyawthemonkey.BahHatHatSocialTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BahHatHatSocial.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BahHatHatSocial";
+			};
+			name = Release;
+		};
+		C8910BA329209D8800435B32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3LGZY3S9Q5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kyawthemonkey.BahHatHatSocialUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BahHatHatSocial;
+			};
+			name = Debug;
+		};
+		C8910BA429209D8800435B32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3LGZY3S9Q5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kyawthemonkey.BahHatHatSocialUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BahHatHatSocial;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C8910B7329209D8600435B32 /* Build configuration list for PBXProject "BahHatHatSocial" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8910B9A29209D8800435B32 /* Debug */,
+				C8910B9B29209D8800435B32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8910B9C29209D8800435B32 /* Build configuration list for PBXNativeTarget "BahHatHatSocial" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8910B9D29209D8800435B32 /* Debug */,
+				C8910B9E29209D8800435B32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8910B9F29209D8800435B32 /* Build configuration list for PBXNativeTarget "BahHatHatSocialTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8910BA029209D8800435B32 /* Debug */,
+				C8910BA129209D8800435B32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8910BA229209D8800435B32 /* Build configuration list for PBXNativeTarget "BahHatHatSocialUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8910BA329209D8800435B32 /* Debug */,
+				C8910BA429209D8800435B32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C8910B7029209D8600435B32 /* Project object */;
+}
