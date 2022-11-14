@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C84671A32922637800310117 /* Future+AsyncAwait.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84671A22922637800310117 /* Future+AsyncAwait.swift */; };
+		C84671A929226B6F00310117 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84671A829226B6F00310117 /* HomeView.swift */; };
+		C84671AC292271CE00310117 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84671AB292271CE00310117 /* MainTabView.swift */; };
+		C84671AF2922736200310117 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84671AE2922736200310117 /* ProfileView.swift */; };
 		C87C1ABC292136DD0038CAB1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87C1ABB292136DD0038CAB1 /* LoginView.swift */; };
 		C87C1ABE292136F70038CAB1 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87C1ABD292136F70038CAB1 /* LoginVM.swift */; };
 		C87C1AC329213EE50038CAB1 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87C1AC229213EE50038CAB1 /* SignUpView.swift */; };
@@ -40,6 +43,9 @@
 
 /* Begin PBXFileReference section */
 		C84671A22922637800310117 /* Future+AsyncAwait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Future+AsyncAwait.swift"; sourceTree = "<group>"; };
+		C84671A829226B6F00310117 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C84671AB292271CE00310117 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		C84671AE2922736200310117 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		C87C1ABB292136DD0038CAB1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C87C1ABD292136F70038CAB1 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 		C87C1AC229213EE50038CAB1 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpView.swift; path = ../../../../../SignUpView.swift; sourceTree = "<group>"; };
@@ -81,6 +87,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C84671A729226B6600310117 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C84671A829226B6F00310117 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C84671AA292271C200310117 /* MainTab */ = {
+			isa = PBXGroup;
+			children = (
+				C84671AB292271CE00310117 /* MainTabView.swift */,
+			);
+			path = MainTab;
+			sourceTree = "<group>";
+		};
+		C84671AD2922735400310117 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C84671AE2922736200310117 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		C87C1ABF29213E8C0038CAB1 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +123,9 @@
 		C87C1AC029213E930038CAB1 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				C84671AA292271C200310117 /* MainTab */,
+				C84671AD2922735400310117 /* Profile */,
+				C84671A729226B6600310117 /* Home */,
 				C87C1AC129213EC60038CAB1 /* SignUp */,
 				C87C1ABF29213E8C0038CAB1 /* Login */,
 			);
@@ -306,10 +339,13 @@
 			files = (
 				C87C1AC329213EE50038CAB1 /* SignUpView.swift in Sources */,
 				C87C1AC8292145640038CAB1 /* DefaultTextFieldBehavior.swift in Sources */,
+				C84671AF2922736200310117 /* ProfileView.swift in Sources */,
 				C87C1ABE292136F70038CAB1 /* LoginVM.swift in Sources */,
 				C87C1ABC292136DD0038CAB1 /* LoginView.swift in Sources */,
 				C84671A32922637800310117 /* Future+AsyncAwait.swift in Sources */,
+				C84671A929226B6F00310117 /* HomeView.swift in Sources */,
 				C87C1AC52921419E0038CAB1 /* SignUpVM.swift in Sources */,
+				C84671AC292271CE00310117 /* MainTabView.swift in Sources */,
 				C8910B7C29209D8600435B32 /* BahHatHatSocialApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
