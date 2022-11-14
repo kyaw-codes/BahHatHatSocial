@@ -10,6 +10,8 @@ import SwiftUI
 struct LoginView: View {
     @EnvironmentObject var vm: LoginVM
     
+    @State private var showSignUp = false
+    
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -29,13 +31,17 @@ struct LoginView: View {
                 .padding()
             }
             .scrollDismissesKeyboard(.interactively)
+            .sheet(isPresented: $showSignUp, content: {
+                SignUpView()
+                    .environmentObject(SignUpVM())
+            })
             .navigationTitle("Sign In")
         }
     }
     
     // MARK: - Views
     @ViewBuilder
-    func SignInButton() -> some View {
+    private func SignInButton() -> some View {
         Button {
             
         } label: {
@@ -43,7 +49,7 @@ struct LoginView: View {
                 .padding(.vertical)
                 .frame(maxWidth: .infinity)
                 .background(
-                    Color.blue.opacity(vm.shouldDisableSignInCTA ? 0.5 : 1),
+                    vm.shouldDisableSignInCTA ? Color.gray : Color.blue,
                     in: RoundedRectangle(cornerRadius: 12)
                 )
                 .foregroundColor(.white)
@@ -52,9 +58,9 @@ struct LoginView: View {
     }
     
     @ViewBuilder
-    func SignUpButton() -> some View {
+    private func SignUpButton() -> some View {
         Button {
-            
+            showSignUp.toggle()
         } label: {
             Text("Sign Up")
                 .padding(.vertical)

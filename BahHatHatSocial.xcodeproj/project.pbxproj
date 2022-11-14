@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C84671A32922637800310117 /* Future+AsyncAwait.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84671A22922637800310117 /* Future+AsyncAwait.swift */; };
 		C87C1ABC292136DD0038CAB1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87C1ABB292136DD0038CAB1 /* LoginView.swift */; };
 		C87C1ABE292136F70038CAB1 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87C1ABD292136F70038CAB1 /* LoginVM.swift */; };
+		C87C1AC329213EE50038CAB1 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87C1AC229213EE50038CAB1 /* SignUpView.swift */; };
+		C87C1AC52921419E0038CAB1 /* SignUpVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87C1AC42921419E0038CAB1 /* SignUpVM.swift */; };
+		C87C1AC8292145640038CAB1 /* DefaultTextFieldBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87C1AC7292145640038CAB1 /* DefaultTextFieldBehavior.swift */; };
 		C8910B7C29209D8600435B32 /* BahHatHatSocialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8910B7B29209D8600435B32 /* BahHatHatSocialApp.swift */; };
 		C8910B8029209D8800435B32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8910B7F29209D8800435B32 /* Assets.xcassets */; };
 		C8910B8329209D8800435B32 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8910B8229209D8800435B32 /* Preview Assets.xcassets */; };
@@ -35,8 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C84671A22922637800310117 /* Future+AsyncAwait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Future+AsyncAwait.swift"; sourceTree = "<group>"; };
 		C87C1ABB292136DD0038CAB1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C87C1ABD292136F70038CAB1 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
+		C87C1AC229213EE50038CAB1 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpView.swift; path = ../../../../../SignUpView.swift; sourceTree = "<group>"; };
+		C87C1AC42921419E0038CAB1 /* SignUpVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVM.swift; sourceTree = "<group>"; };
+		C87C1AC7292145640038CAB1 /* DefaultTextFieldBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTextFieldBehavior.swift; sourceTree = "<group>"; };
 		C8910B7829209D8600435B32 /* BahHatHatSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BahHatHatSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8910B7B29209D8600435B32 /* BahHatHatSocialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BahHatHatSocialApp.swift; sourceTree = "<group>"; };
 		C8910B7F29209D8800435B32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,8 +102,19 @@
 		C87C1AC129213EC60038CAB1 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				C87C1AC229213EE50038CAB1 /* SignUpView.swift */,
+				C87C1AC42921419E0038CAB1 /* SignUpVM.swift */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		C87C1AC6292145550038CAB1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C87C1AC7292145640038CAB1 /* DefaultTextFieldBehavior.swift */,
+				C84671A22922637800310117 /* Future+AsyncAwait.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		C8910B6F29209D8600435B32 = {
@@ -121,6 +140,7 @@
 		C8910B7A29209D8600435B32 /* BahHatHatSocial */ = {
 			isa = PBXGroup;
 			children = (
+				C87C1AC6292145550038CAB1 /* Utils */,
 				C87C1AC029213E930038CAB1 /* Core */,
 				C8910B7B29209D8600435B32 /* BahHatHatSocialApp.swift */,
 				C8910B7F29209D8800435B32 /* Assets.xcassets */,
@@ -284,8 +304,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C87C1AC329213EE50038CAB1 /* SignUpView.swift in Sources */,
+				C87C1AC8292145640038CAB1 /* DefaultTextFieldBehavior.swift in Sources */,
 				C87C1ABE292136F70038CAB1 /* LoginVM.swift in Sources */,
 				C87C1ABC292136DD0038CAB1 /* LoginView.swift in Sources */,
+				C84671A32922637800310117 /* Future+AsyncAwait.swift in Sources */,
+				C87C1AC52921419E0038CAB1 /* SignUpVM.swift in Sources */,
 				C8910B7C29209D8600435B32 /* BahHatHatSocialApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
