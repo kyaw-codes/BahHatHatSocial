@@ -16,7 +16,7 @@ struct ProfileView: View {
                     InfoView()
                 }
                 .padding(.bottom, 10)
-                .background(Color.white)
+                .background(Color(uiColor: .systemBackground))
                 
                 Divider()
             }

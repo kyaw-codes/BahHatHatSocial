@@ -18,7 +18,7 @@ struct MainTabView: View {
                 }
                 .tag(1)
             
-            Color.blue
+            AddPostView()
                 .tabItem {
                     Label("New Post", systemImage: "plus.square")
                 }

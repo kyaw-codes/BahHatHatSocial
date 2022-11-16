@@ -13,7 +13,7 @@ struct HomeView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 12) {
                     Group {
-                        Text("Hi, ") + Text("Kyaw Monkey").font(.title3.bold()).foregroundColor(.black.opacity(0.8))
+                        Text("Hi, ") + Text("Kyaw Monkey").font(.title3.bold()).foregroundColor(.primary.opacity(0.8))
                     }
                     .font(.title3)
                     .foregroundColor(.gray)
@@ -21,9 +21,19 @@ struct HomeView: View {
                     Text("BahHatHatSocial")
                         .font(.largeTitle.bold())
                 }
-                .padding()
+                .padding(.horizontal)
                 .frame(maxWidth: .infinity, alignment: .leading)
+                
+                PostView()
+                
+                PostView()
             }
+            .safeAreaInset(edge: .top) {
+                Color(uiColor: .systemBackground)
+                    .edgesIgnoringSafeArea(.top)
+                    .frame(height: 0)
+            }
+
         }
     }
 }

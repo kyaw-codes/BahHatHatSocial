@@ -8,6 +8,8 @@
 import SwiftUI
 import Combine
 import PhotosUI
+import FirebaseAuth
+import FirebaseAuthCombineSwift
 
 class SignUpVM: ObservableObject {
     @Published var displayName: String = ""
@@ -20,6 +22,10 @@ class SignUpVM: ObservableObject {
     @Published var profileImage: UIImage? = nil
     @Published var confirmPasswordError: String? = nil
     @Published var shouldDisableSignUpCTA = true
+    @Published var showingErrorAlert = false
+    @Published var errorMessage = ""
+    @Published var loading = false
+    @Published var dismissSelf = false
     
     private var subscriptionsSet = Set<AnyCancellable>()
     
@@ -27,6 +33,20 @@ class SignUpVM: ObservableObject {
         extractImageFromPhotoPickerItem()
         checkConfirmPassword()
         validateAndUpdateSignUpBtnState()
+    }
+    
+    func signUp() {
+        AuthManager().signup(email: email, password: password, displayName: displayName, profileImage: profileImage?.pngData(), biography: biography)
+            .sink { [weak self] completion in
+                switch completion {
+                case .finished:
+                    self?.dismissSelf.toggle()
+                case .failure(let err):
+                    self?.showingErrorAlert.toggle()
+                    self?.errorMessage = err.localizedDescription
+                }
+            } receiveValue: { _ in }
+            .store(in: &subscriptionsSet)
     }
     
     private func extractImageFromPhotoPickerItem() {
