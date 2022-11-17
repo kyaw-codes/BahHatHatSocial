@@ -39,6 +39,8 @@
 		C8910B9929209D8800435B32 /* BahHatHatSocialUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8910B9829209D8800435B32 /* BahHatHatSocialUITestsLaunchTests.swift */; };
 		C8FF9DBA292572EE00FF45AF /* SafeAreaInsetsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FF9DB9292572EE00FF45AF /* SafeAreaInsetsKey.swift */; };
 		C8FF9DBC2925DE4400FF45AF /* ProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FF9DBB2925DE4400FF45AF /* ProfileVM.swift */; };
+		C8FF9DBE2925E43E00FF45AF /* BHHPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FF9DBD2925E43E00FF45AF /* BHHPost.swift */; };
+		C8FF9DC02925E57500FF45AF /* PostManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FF9DBF2925E57500FF45AF /* PostManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		C8910B9829209D8800435B32 /* BahHatHatSocialUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BahHatHatSocialUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C8FF9DB9292572EE00FF45AF /* SafeAreaInsetsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaInsetsKey.swift; sourceTree = "<group>"; };
 		C8FF9DBB2925DE4400FF45AF /* ProfileVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVM.swift; sourceTree = "<group>"; };
+		C8FF9DBD2925E43E00FF45AF /* BHHPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHHPost.swift; sourceTree = "<group>"; };
+		C8FF9DBF2925E57500FF45AF /* PostManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				C88993E12923FB15004A3767 /* AuthManager.swift */,
+				C8FF9DBF2925E57500FF45AF /* PostManager.swift */,
 				C88993E62924FCA1004A3767 /* PhotoUploadManager.swift */,
 			);
 			path = AuthManager;
@@ -202,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				C88993E42923FBE6004A3767 /* BHHUser.swift */,
+				C8FF9DBD2925E43E00FF45AF /* BHHPost.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -445,6 +451,7 @@
 				C87C1ABC292136DD0038CAB1 /* LoginView.swift in Sources */,
 				C88993E52923FBE6004A3767 /* BHHUser.swift in Sources */,
 				C84671A32922637800310117 /* Future+AsyncAwait.swift in Sources */,
+				C8FF9DC02925E57500FF45AF /* PostManager.swift in Sources */,
 				C84671A929226B6F00310117 /* HomeView.swift in Sources */,
 				C87C1AC52921419E0038CAB1 /* SignUpVM.swift in Sources */,
 				C88993E22923FB15004A3767 /* AuthManager.swift in Sources */,
@@ -453,6 +460,7 @@
 				C88993FC2925692B004A3767 /* PostView.swift in Sources */,
 				C8910B7C29209D8600435B32 /* BahHatHatSocialApp.swift in Sources */,
 				C8FF9DBC2925DE4400FF45AF /* ProfileVM.swift in Sources */,
+				C8FF9DBE2925E43E00FF45AF /* BHHPost.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

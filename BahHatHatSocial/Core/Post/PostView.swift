@@ -28,6 +28,7 @@ struct PostView: View {
                     
                     Spacer()
                 }
+                .padding(.horizontal)
                 
                 Text("Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.")
                     .foregroundColor(.primary)
@@ -35,10 +36,12 @@ struct PostView: View {
                 AsyncImage(url: URL(string: "https://images.unsplash.com/photo-1517960413843-0aee8e2b3285?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80")) { image in
                     image
                         .resizable()
-                        .aspectRatio(contentMode: .fill)
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: UIScreen.main.bounds.width)
                 } placeholder: {
                     ZStack {
                         Color.primary.opacity(0.3)
+                            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width)
                         
                         ProgressView()
                             .scaleEffect(2)

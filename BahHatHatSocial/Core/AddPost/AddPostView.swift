@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct AddPostView: View {
     @StateObject var vm = AddPostVM()
@@ -40,13 +41,32 @@ struct AddPostView: View {
                                 .padding(.horizontal, 8)
                                 .padding(.vertical, 12)
                         }
-
+                        
                         TextEditor(text: $vm.postText)
                             .opacity(vm.postText.isEmpty ? 0.5 : 1)
                             .focused($isFocused, equals: true)
+                            .padding(.top, 5)
                     }
                     .font(.body)
                     .padding(.horizontal)
+                    
+                    if let image = vm.selectedImage {
+                        ZStack(alignment: .topTrailing) {
+                            Image(uiImage: image)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: UIScreen.main.bounds.width)
+                            
+                            Button {
+                                vm.selectedImage = nil
+                            } label: {
+                                Image(systemName: "xmark")
+                                    .font(.title)
+                                    .foregroundColor(.white)
+                                    .padding()
+                            }
+                        }
+                    }
                 }
             }
             .scrollDismissesKeyboard(.interactively)
@@ -54,25 +74,36 @@ struct AddPostView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        
-                    } label: {
+                    Button(action: vm.createNewPost) {
                         Text("Publish")
+                            .foregroundColor(vm.shouldDisablePublishCTA ? .gray : .blue)
                     }
+                    .disabled(vm.shouldDisablePublishCTA)
                 }
                 
                 ToolbarItem(placement: .keyboard) {
-                    Button {
-                        
-                    } label: {
+                    PhotosPicker(
+                        selection: $vm.selectedPhotoItem,
+                        matching: .images,
+                        photoLibrary: .shared()
+                    ) {
                         Image(systemName: "photo")
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                 }
 
             }
+            .alert(vm.errorMessage, isPresented: $vm.showingErrorAlert) {
+                Button("OK", role: .cancel) { }
+            }
+            .overlay {
+                if vm.loading {
+                    LoadingView()
+                }
+            }
             .onAppear {
                 vm.postText = ""
+                vm.selectedImage = nil                
                 isFocused = true
             }
         }
