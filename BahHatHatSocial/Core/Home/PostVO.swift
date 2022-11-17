@@ -12,7 +12,8 @@ struct PostVO: Identifiable {
     let postedDate: Date
     let postText: String
     let imageUrl: String
-    let postedBy: String
+    let postedUserId: String
+    let postedUserDocId: String
     var likedBy: [String] = []
     var comments: [PostVO] = []
     
@@ -29,7 +30,7 @@ struct PostVO: Identifiable {
     }
     
     var canDelete: Bool {
-        return postedBy == AuthManager().currentUserId()
+        return postedUserId == AuthManager().currentUserId()
     }
     
     var likedByMe: Bool {
@@ -39,12 +40,13 @@ struct PostVO: Identifiable {
         return likedBy.contains(id)
     }
     
-    init(documentId: String, postedDate: Date, postText: String, imageUrl: String, postedBy: String) {
+    init(documentId: String, postedDate: Date, postText: String, imageUrl: String, postedUserId: String, postedUserDocId: String) {
         self.documentId = documentId
         self.postedDate = postedDate
         self.postText = postText
         self.imageUrl = imageUrl
-        self.postedBy = postedBy
+        self.postedUserId = postedUserId
+        self.postedUserDocId = postedUserDocId
     }
     
     init(post: BHHPost) {
@@ -52,7 +54,8 @@ struct PostVO: Identifiable {
         self.postedDate = post.postedDate ?? Date()
         self.postText = post.postText
         self.imageUrl = post.imageUrl
-        self.postedBy = post.postedBy
+        self.postedUserId = post.postedByUser.userId
+        self.postedUserDocId = post.postedByUser.documentId
         self.likedBy = post.likedBy
         self.comments = post.comments.map(PostVO.init(post:))
     }

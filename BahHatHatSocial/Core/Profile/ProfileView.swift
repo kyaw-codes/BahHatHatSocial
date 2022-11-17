@@ -6,24 +6,45 @@
 //
 
 import SwiftUI
+import FirebaseFirestoreSwift
 
 struct ProfileView: View {
     @StateObject private var vm = ProfileVM()
     @EnvironmentObject var mainAppFlowVM: MainAppFlowVM
     
+    @FirestoreQuery(
+        collectionPath: "posts",
+        predicates: [
+            .isEqualTo("postedByUser.userId", AuthManager().currentUserId() ?? "")
+        ]
+    )
+    var posts: [BHHPost]
+    
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack {
-                    ProfileView()
+                    ProfileHeaderView()
                     InfoView()
                 }
                 .padding(.bottom, 10)
                 .background(Color(uiColor: .systemBackground))
                 
                 Divider()
+                
+                let sortedPosts = posts
+                    .sorted(by: {
+                        $0.postedDate ?? Date() > $1.postedDate ?? Date()
+                    })
+                    .map(PostVO.init(post:))
+
+                ForEach(sortedPosts) { post in
+                    LazyVGrid(columns: [GridItem(.flexible())]) {
+                        PostView(vo: post, user: mainAppFlowVM.currentUser!)
+                    }
+                }
             }
-            .navigationTitle("kyaw.codes@gmail.com")
+            .navigationTitle(mainAppFlowVM.currentUser?.email ?? "")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 Button(action: vm.logout) {
@@ -33,21 +54,23 @@ struct ProfileView: View {
             .alert(vm.errorMessage, isPresented: $vm.showingErrorAlert) {
                 Button("OK", role: .cancel) { }
             }
+            .overlay {
+                if vm.loading {
+                    LoadingView()
+                }
+            }
             .onChange(of: vm.successfullySignOut) { successfullySignOut in
+                mainAppFlowVM.selectedTab = 1
                 mainAppFlowVM.shouldShowLogin = successfullySignOut
             }
         }
     }
     
     @ViewBuilder
-    private func ProfileView() -> some View {
+    private func ProfileHeaderView() -> some View {
         HStack {
-            Image(systemName: "person")
-                .font(.largeTitle)
-                .frame(width: 80, height: 80)
-                .foregroundColor(.white)
-                .background(.gray.opacity(0.5), in: Circle())
-            
+            CircularProfileImageView(url: mainAppFlowVM.currentUser?.profileImageUrl, size: .init(width: 80, height: 80))
+
             Spacer()
             Spacer()
             
@@ -61,18 +84,18 @@ struct ProfileView: View {
             Spacer()
             
             VStack {
-                Text("12")
+                Text("0")
                     .font(.title3.bold())
-                Text("Followers")
+                Text("Follower(s)")
                     .font(.caption)
             }
             
             Spacer()
             
             VStack {
-                Text("5")
+                Text("0")
                     .font(.title3.bold())
-                Text("Following")
+                Text("Following(s)")
                     .font(.caption)
             }
         }
@@ -83,10 +106,13 @@ struct ProfileView: View {
     @ViewBuilder
     private func InfoView() -> some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("Kyaw Monkey")
+            Text(mainAppFlowVM.currentUser?.displayName ?? "")
                 .font(.headline)
-            Text("iOS @CodigoApps | Programming Mentor | Swift enthusiast | Community Builder | Organising CocoaHeads Myanmar 🇲🇲")
-                .foregroundColor(.gray)
+            
+            if let bio = mainAppFlowVM.currentUser?.biography {
+                Text(bio)
+                    .foregroundColor(.gray)
+            }
             
             Button {
                 

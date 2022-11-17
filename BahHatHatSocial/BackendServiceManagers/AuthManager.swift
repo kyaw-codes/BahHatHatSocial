@@ -52,22 +52,6 @@ final class AuthManager {
             .eraseToAnyPublisher()
     }
     
-    func hasAlreadyLoggedIn() -> Bool {
-        auth.currentUser != nil
-    }
-
-    func currentUser() -> User? {
-        guard hasAlreadyLoggedIn() else {
-            return nil
-        }
-        
-        return auth.currentUser
-    }
-    
-    func currentUserId() -> String? {
-        currentUser()?.uid
-    }
-    
     func logout() -> Result<Void, Error> {
         do {
             try auth.signOut()
@@ -75,5 +59,46 @@ final class AuthManager {
         } catch {
             return .failure(error)
         }
+    }
+    
+    func fetchAllUsers() -> AnyPublisher<[BHHUser], Error> {
+        db.collection("users").getDocuments()
+            .map { snapshot in
+                snapshot.documents.compactMap {
+                    try? $0.data(as: BHHUser.self)
+                }
+            }
+            .eraseToAnyPublisher()
+    }
+    
+    func fetchUser(withDocId id: String) -> AnyPublisher<BHHUser?, Error> {
+        db.collection("users").document(id).getDocument()
+            .map { try? $0.data(as: BHHUser.self) }
+            .eraseToAnyPublisher()
+    }
+    
+    func fetchUser(withUserId id: String) -> AnyPublisher<BHHUser?, Error> {
+        fetchAllUsers()
+            .map { users in
+                users.first { $0.userId == id }
+            }
+            .eraseToAnyPublisher()
+    }
+    
+    func currentUser() -> AnyPublisher<BHHUser?, Error> {
+        let currentUserId = Just(currentUserId()).compactMap { $0 }.share()
+        let changedUserId = auth.authStateDidChangePublisher().compactMap(\.?.uid).share()
+        
+        return currentUserId.merge(with: changedUserId)
+            .flatMap(fetchUser(withUserId:))
+            .eraseToAnyPublisher()
+    }
+
+    func hasAlreadyLoggedIn() -> Bool {
+        auth.currentUser != nil
+    }
+
+    func currentUserId() -> String? {
+        auth.currentUser?.uid
     }
 }

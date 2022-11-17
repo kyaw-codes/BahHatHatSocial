@@ -9,19 +9,21 @@ import SwiftUI
 
 struct PostView: View {
     let vo: PostVO
+    let user: BHHUser?
+    
+    @StateObject private var vm = PostVM()
+    
+    @State private var showingAlert = false
+    @State private var alertTitle = ""
     
     var body: some View {
         VStack {
             VStack {
                 HStack(spacing: 12) {
-                    Image(systemName: "person.circle")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 48, height: 48)
-                        .clipShape(Circle())
+                    CircularProfileImageView(url: user?.profileImageUrl, size: .init(width: 48, height: 48))
                     
                     VStack(alignment: .leading, spacing: 4) {
-                        Text("KyawMonkey")
+                        Text(user?.displayName ?? "")
                             .font(.headline)
                         Text(vo.postedDate.presentableString)
                             .font(.footnote)
@@ -29,6 +31,13 @@ struct PostView: View {
                     }
                     
                     Spacer()
+                    
+                    if vo.canDelete {
+                        Button(action: vm.presentDeleteConfirmationAlert) {
+                            Image(systemName: "trash")
+                                .foregroundColor(.red)
+                        }
+                    }
                 }
                 
                 Text(vo.postText)
@@ -57,7 +66,7 @@ struct PostView: View {
             
             HStack {
                 Button {
-                    
+
                 } label: {
                     HStack {
                         Image(systemName: "hand.thumbsup")
@@ -83,11 +92,17 @@ struct PostView: View {
             
             Divider()
         }
+        .alert(vm.alertTitle, isPresented: $vm.showingAlert) {
+            Button("Cancel", role: .cancel) { }
+            Button("Delete", role: .destructive) {
+                vm.deletePost(id: vo.id)
+            }
+        }
     }
 }
 
 struct PostView_Previews: PreviewProvider {
     static var previews: some View {
-        PostView(vo: .init(documentId: "", postedDate: Date(), postText: "", imageUrl: "", postedBy: ""))
+        PostView(vo: .init(documentId: "", postedDate: Date(), postText: "", imageUrl: "", postedUserId: "", postedUserDocId: ""), user: nil)
     }
 }

@@ -19,16 +19,12 @@ struct AddPostView: View {
             ScrollView {
                 VStack {
                     HStack(spacing: 12) {
-                        Image(systemName: "person.circle")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 48, height: 48)
-                            .clipShape(Circle())
+                        CircularProfileImageView(url: mainAppFlowVM.currentUser?.profileImageUrl, size: .init(width: 48, height: 48))
                         
                         VStack(alignment: .leading, spacing: 4) {
-                            Text("KyawMonkey")
+                            Text(mainAppFlowVM.currentUser?.displayName ?? "")
                                 .font(.headline)
-                            Text("kyaw.codes@gmail.com")
+                            Text(mainAppFlowVM.currentUser?.email ?? "")
                                 .font(.footnote)
                                 .foregroundColor(.primary.opacity(0.8))
                         }
@@ -38,7 +34,7 @@ struct AddPostView: View {
                     
                     ZStack(alignment: .topLeading) {
                         if vm.postText.isEmpty {
-                            Text("Placeholder Text")
+                            Text("Type or paste something bah-hat-hat")
                                 .foregroundColor(.secondary)
                                 .padding(.horizontal, 8)
                                 .padding(.vertical, 12)

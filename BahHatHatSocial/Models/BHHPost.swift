@@ -13,7 +13,12 @@ struct BHHPost: Codable {
     @ServerTimestamp var postedDate: Date?
     let postText: String
     let imageUrl: String
-    let postedBy: String
+    let postedByUser: PostedByUser
     let likedBy: [String]
     let comments: [BHHPost]
+}
+
+struct PostedByUser: Codable {
+    let userId: String
+    let documentId: String
 }

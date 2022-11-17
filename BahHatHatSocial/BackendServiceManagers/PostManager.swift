@@ -15,22 +15,22 @@ final class PostManager {
     private let authManager = AuthManager()
     private let photoUploadManager = PhotoUploadManager()
     
-    private var currentUserId: String {
-        authManager.currentUser()?.uid ?? ""
-    }
-    
     private var subscriptionSets = Set<AnyCancellable>()
     
     func createPost(text: String, image: Data?) -> AnyPublisher<BHHPost, Error> {
         let imagePath = "postImages/\(UUID().uuidString).png"
         
-        return photoUploadManager
+        let currentUser = authManager.currentUser().replaceError(with: nil).share()
+        let photoUpload = photoUploadManager
             .upload(photoData: image ?? Data(), withPath: imagePath)
-            .map {
+            .share()
+        
+        return Publishers.CombineLatest(currentUser, photoUpload)
+            .map { (user, photoUrl) in
                 BHHPost(
                     postText: text,
-                    imageUrl: image == nil ? "" : $0,
-                    postedBy: self.currentUserId,
+                    imageUrl: image == nil ? "" : photoUrl,
+                    postedByUser: .init(userId: user?.userId ?? "", documentId: user?.docId ?? ""),
                     likedBy: [],
                     comments: []
                 )
@@ -44,5 +44,9 @@ final class PostManager {
                 }
             }
             .eraseToAnyPublisher()
+    }
+
+    func deletePost(id: String) -> Future<Void, Error> {
+        return db.collection("posts").document(id).delete().asFuture()
     }
 }

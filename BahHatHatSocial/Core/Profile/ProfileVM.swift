@@ -6,16 +6,20 @@
 //
 
 import SwiftUI
+import Combine
 
 class ProfileVM: ObservableObject {
-    
+    @Published var successfullySignOut = false
     @Published var showingErrorAlert = false
     @Published var errorMessage = ""
-    @Published var successfullySignOut = false
-    
+    @Published var loading = false
+
+    private let authManager = AuthManager()
+
+    private var subscriptionsSet = Set<AnyCancellable>()
+
     func logout() {
-        let result = AuthManager().logout()
-        switch result {
+        switch authManager.logout() {
         case .success(_): successfullySignOut.toggle()
         case .failure(let err):
             showingErrorAlert.toggle()

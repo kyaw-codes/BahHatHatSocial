@@ -6,9 +6,13 @@
 //
 
 import SwiftUI
+import Combine
 
 class HomeVM: ObservableObject {
     
     private let postManager = PostManager()
     
+    func deletePost() {
+        
+    }
 }

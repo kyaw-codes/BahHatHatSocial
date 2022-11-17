@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Firebase
+import Combine
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
@@ -18,6 +19,11 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 class MainAppFlowVM: ObservableObject {
     @Published var shouldShowLogin = false
     @Published var selectedTab = 1
+    @Published var currentUser: BHHUser? = nil
+    
+    init() {
+        AuthManager().currentUser().replaceError(with: nil).assign(to: &$currentUser)
+    }
 }
 
 @main
