@@ -41,6 +41,9 @@
 		C8FF9DBC2925DE4400FF45AF /* ProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FF9DBB2925DE4400FF45AF /* ProfileVM.swift */; };
 		C8FF9DBE2925E43E00FF45AF /* BHHPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FF9DBD2925E43E00FF45AF /* BHHPost.swift */; };
 		C8FF9DC02925E57500FF45AF /* PostManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FF9DBF2925E57500FF45AF /* PostManager.swift */; };
+		C8FF9DC22925F3ED00FF45AF /* PostVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FF9DC12925F3ED00FF45AF /* PostVO.swift */; };
+		C8FF9DC42925F68500FF45AF /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FF9DC32925F68500FF45AF /* HomeVM.swift */; };
+		C8FF9DC62925FC9A00FF45AF /* Date+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FF9DC52925FC9A00FF45AF /* Date+Format.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +94,9 @@
 		C8FF9DBB2925DE4400FF45AF /* ProfileVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVM.swift; sourceTree = "<group>"; };
 		C8FF9DBD2925E43E00FF45AF /* BHHPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHHPost.swift; sourceTree = "<group>"; };
 		C8FF9DBF2925E57500FF45AF /* PostManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostManager.swift; sourceTree = "<group>"; };
+		C8FF9DC12925F3ED00FF45AF /* PostVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVO.swift; sourceTree = "<group>"; };
+		C8FF9DC32925F68500FF45AF /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
+		C8FF9DC52925FC9A00FF45AF /* Date+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Format.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				C84671A829226B6F00310117 /* HomeView.swift */,
+				C8FF9DC32925F68500FF45AF /* HomeVM.swift */,
+				C8FF9DC12925F3ED00FF45AF /* PostVO.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -189,6 +197,7 @@
 				C87C1AC7292145640038CAB1 /* DefaultTextFieldBehavior.swift */,
 				C84671A22922637800310117 /* Future+AsyncAwait.swift */,
 				C8FF9DB9292572EE00FF45AF /* SafeAreaInsetsKey.swift */,
+				C8FF9DC52925FC9A00FF45AF /* Date+Format.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -446,6 +455,7 @@
 				C84671AF2922736200310117 /* ProfileView.swift in Sources */,
 				C87C1ABE292136F70038CAB1 /* LoginVM.swift in Sources */,
 				C88993F929255A91004A3767 /* LoadingView.swift in Sources */,
+				C8FF9DC62925FC9A00FF45AF /* Date+Format.swift in Sources */,
 				C889940129256AAD004A3767 /* AddPostVM.swift in Sources */,
 				C88993FF2925698F004A3767 /* AddPostView.swift in Sources */,
 				C87C1ABC292136DD0038CAB1 /* LoginView.swift in Sources */,
@@ -457,7 +467,9 @@
 				C88993E22923FB15004A3767 /* AuthManager.swift in Sources */,
 				C84671AC292271CE00310117 /* MainTabView.swift in Sources */,
 				C8FF9DBA292572EE00FF45AF /* SafeAreaInsetsKey.swift in Sources */,
+				C8FF9DC42925F68500FF45AF /* HomeVM.swift in Sources */,
 				C88993FC2925692B004A3767 /* PostView.swift in Sources */,
+				C8FF9DC22925F3ED00FF45AF /* PostVO.swift in Sources */,
 				C8910B7C29209D8600435B32 /* BahHatHatSocialApp.swift in Sources */,
 				C8FF9DBC2925DE4400FF45AF /* ProfileVM.swift in Sources */,
 				C8FF9DBE2925E43E00FF45AF /* BHHPost.swift in Sources */,

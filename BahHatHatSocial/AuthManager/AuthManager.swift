@@ -32,7 +32,14 @@ final class AuthManager {
             .flatMap { downloadableUrl in
                 self.auth.createUser(withEmail: email, password: password)
                     .map(\.user.uid)
-                    .map { BHHUser(userId: $0, email: email, displayName: displayName, profileImageUrl: downloadableUrl, biography: biography) }
+                    .map {
+                        BHHUser(
+                            userId: $0, email: email,
+                            displayName: displayName,
+                            profileImageUrl: profileImage == nil ? "" : downloadableUrl,
+                            biography: biography
+                        )
+                    }
             }
             .flatMap { self.db.collection("users").addDocument(from: $0) }
             .map { _ in () }
@@ -55,6 +62,10 @@ final class AuthManager {
         }
         
         return auth.currentUser
+    }
+    
+    func currentUserId() -> String? {
+        currentUser()?.uid
     }
     
     func logout() -> Result<Void, Error> {

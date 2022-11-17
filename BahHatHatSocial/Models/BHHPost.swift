@@ -10,18 +10,10 @@ import FirebaseFirestoreSwift
 
 struct BHHPost: Codable {
     @DocumentID var id: String?
-    var postedDate = Date()
+    @ServerTimestamp var postedDate: Date?
     let postText: String
     let imageUrl: String
     let postedBy: String
     let likedBy: [String]
     let comments: [BHHPost]
-    
-    var likeCount: Int {
-        return likedBy.count
-    }
-    
-    var commentCount: Int {
-        return comments.count
-    }
 }

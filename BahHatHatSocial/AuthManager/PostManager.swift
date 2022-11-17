@@ -6,6 +6,7 @@
 //
 
 import FirebaseFirestore
+import FirebaseFirestoreSwift
 import FirebaseFirestoreCombineSwift
 import Combine
 
@@ -28,7 +29,7 @@ final class PostManager {
             .map {
                 BHHPost(
                     postText: text,
-                    imageUrl: $0,
+                    imageUrl: image == nil ? "" : $0,
                     postedBy: self.currentUserId,
                     likedBy: [],
                     comments: []

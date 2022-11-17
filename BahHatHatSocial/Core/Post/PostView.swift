@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct PostView: View {
+    let vo: PostVO
+    
     var body: some View {
         VStack {
             VStack {
@@ -21,30 +23,33 @@ struct PostView: View {
                     VStack(alignment: .leading, spacing: 4) {
                         Text("KyawMonkey")
                             .font(.headline)
-                        Text("19 Nov, 2022 12:31 PM")
+                        Text(vo.postedDate.presentableString)
                             .font(.footnote)
                             .foregroundColor(.primary.opacity(0.8))
                     }
                     
                     Spacer()
                 }
-                .padding(.horizontal)
                 
-                Text("Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.")
+                Text(vo.postText)
+                    .multilineTextAlignment(.leading)
+                    .frame(maxWidth: .infinity, alignment: .leading)
                     .foregroundColor(.primary)
                 
-                AsyncImage(url: URL(string: "https://images.unsplash.com/photo-1517960413843-0aee8e2b3285?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80")) { image in
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: UIScreen.main.bounds.width)
-                } placeholder: {
-                    ZStack {
-                        Color.primary.opacity(0.3)
-                            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width)
-                        
-                        ProgressView()
-                            .scaleEffect(2)
+                if !vo.imageUrl.isEmpty {
+                    AsyncImage(url: URL(string: vo.imageUrl)) { image in
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: UIScreen.main.bounds.width)
+                    } placeholder: {
+                        ZStack {
+                            Color.primary.opacity(0.3)
+                                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width)
+                            
+                            ProgressView()
+                                .scaleEffect(2)
+                        }
                     }
                 }
             }
@@ -58,7 +63,7 @@ struct PostView: View {
                         Image(systemName: "hand.thumbsup")
                             .font(.title2)
                         
-                        Text("1 Like")
+                        Text("\(vo.likeCount) Like(s)")
                     }
                     .frame(maxWidth: .infinity)
                 }
@@ -70,7 +75,7 @@ struct PostView: View {
                         Image(systemName: "bubble.left")
                             .font(.title2)
                         
-                        Text("0 Comment")
+                        Text("\(vo.commentCount) Comment(s)")
                     }
                     .frame(maxWidth: .infinity)
                 }
@@ -83,6 +88,6 @@ struct PostView: View {
 
 struct PostView_Previews: PreviewProvider {
     static var previews: some View {
-        PostView()
+        PostView(vo: .init(documentId: "", postedDate: Date(), postText: "", imageUrl: "", postedBy: ""))
     }
 }

@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import FirebaseFirestoreSwift
 
 struct HomeView: View {
+    @StateObject private var vm = HomeVM()
+    @FirestoreQuery(collectionPath: "posts") var allPosts: [BHHPost]
+    
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -24,16 +28,21 @@ struct HomeView: View {
                 .padding(.horizontal)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 
-                PostView()
+                let sortedPosts = allPosts
+                    .sorted(by: { ($0.postedDate ?? Date()) > ($1.postedDate ?? Date()) })
+                    .map(PostVO.init(post:))
                 
-                PostView()
+                ForEach(sortedPosts) { post in
+                    LazyVGrid(columns: [GridItem(.flexible())]) {
+                        PostView(vo: post)
+                    }
+                }
             }
             .safeAreaInset(edge: .top) {
                 Color(uiColor: .systemBackground)
                     .edgesIgnoringSafeArea(.top)
                     .frame(height: 0)
             }
-
         }
     }
 }
