@@ -9,6 +9,8 @@ import SwiftUI
 import PhotosUI
 
 struct AddPostView: View {
+    @EnvironmentObject var mainAppFlowVM: MainAppFlowVM
+
     @StateObject var vm = AddPostVM()
     @FocusState var isFocused: Bool
     
@@ -103,8 +105,13 @@ struct AddPostView: View {
             }
             .onAppear {
                 vm.postText = ""
-                vm.selectedImage = nil                
+                vm.selectedImage = nil
                 isFocused = true
+            }
+            .onChange(of: vm.hasBeenPosted) { posted in
+                if posted {
+                    mainAppFlowVM.selectedTab = 1
+                }
             }
         }
     }

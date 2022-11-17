@@ -21,6 +21,7 @@ class AddPostVM: ObservableObject {
     @Published var showingErrorAlert = false
     @Published var errorMessage = ""
     @Published var loading = false
+    @Published var hasBeenPosted = false
 
     private var subscriptionsSet = Set<AnyCancellable>()
     
@@ -56,11 +57,12 @@ class AddPostVM: ObservableObject {
         loading.toggle()
         
         postManager.createPost(text: postText, image: selectedImage?.pngData())
+            .receive(on: DispatchQueue.main)
             .sink { [weak self] completion in
                 self?.loading.toggle()
                 switch completion {
                 case .finished:
-                    break
+                    self?.hasBeenPosted.toggle()
                 case .failure(let err):
                     self?.showingErrorAlert.toggle()
                     self?.errorMessage = err.localizedDescription

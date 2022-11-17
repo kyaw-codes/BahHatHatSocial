@@ -17,6 +17,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 class MainAppFlowVM: ObservableObject {
     @Published var shouldShowLogin = false
+    @Published var selectedTab = 1
 }
 
 @main
