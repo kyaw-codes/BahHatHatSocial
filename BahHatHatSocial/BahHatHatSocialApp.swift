@@ -15,16 +15,25 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     }
 }
 
+class MainAppFlowVM: ObservableObject {
+    @Published var shouldShowLogin = false
+}
+
 @main
 struct BahHatHatSocialApp: App {
     @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
-    @StateObject var loginVM = LoginVM()
+    
+    @StateObject var vm = MainAppFlowVM()
     
     var body: some Scene {
         WindowGroup {
-//            LoginView()
-//                .environmentObject(loginVM)
-            MainTabView()
+            if AuthManager().hasAlreadyLoggedIn() && !vm.shouldShowLogin {
+                MainTabView()
+                    .environmentObject(vm)
+            } else {
+                LoginView()
+                    .environmentObject(vm)
+            }
         }
     }
 }

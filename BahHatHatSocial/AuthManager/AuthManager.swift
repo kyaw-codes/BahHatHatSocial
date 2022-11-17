@@ -14,6 +14,7 @@ import Combine
 final class AuthManager {
 
     private let db = Firestore.firestore()
+    private let auth = Auth.auth()
     private let photoUploadManager = PhotoUploadManager()
     private var subscriptionSets = Set<AnyCancellable>()
 
@@ -29,27 +30,39 @@ final class AuthManager {
         return photoUploadManager
             .upload(photoData: profileImage ?? Data(), withPath: profileImagePath)
             .flatMap { downloadableUrl in
-                Auth.auth().createUser(withEmail: email, password: password)
+                self.auth.createUser(withEmail: email, password: password)
                     .map(\.user.uid)
                     .map { BHHUser(userId: $0, email: email, displayName: displayName, profileImageUrl: downloadableUrl, biography: biography) }
             }
             .flatMap { self.db.collection("users").addDocument(from: $0) }
             .map { _ in () }
             .eraseToAnyPublisher()
-//            .sink { completion in
-//                switch completion {
-//                case .finished:
-//                    break
-//                case .failure(let error):
-//                    print("\(#file) \(#function): failed to add 'users' collection: \(error.localizedDescription)")
-//                }
-//            } receiveValue: { ref in
-//
-//            }
-//            .store(in: &subscriptionSets)
     }
     
-    func login(email: String, password: String) {
+    func login(email: String, password: String) -> AnyPublisher<User, Error> {
+        auth.signIn(withEmail: email, password: password)
+            .map(\.user)
+            .eraseToAnyPublisher()
+    }
+    
+    func hasAlreadyLoggedIn() -> Bool {
+        auth.currentUser != nil
+    }
+
+    func currentUser() -> User? {
+        guard hasAlreadyLoggedIn() else {
+            return nil
+        }
         
+        return auth.currentUser
+    }
+    
+    func logout() -> Result<Void, Error> {
+        do {
+            try auth.signOut()
+            return .success(())
+        } catch {
+            return .failure(error)
+        }
     }
 }

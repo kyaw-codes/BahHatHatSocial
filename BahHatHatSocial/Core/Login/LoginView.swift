@@ -8,7 +8,14 @@
 import SwiftUI
 
 struct LoginView: View {
-    @EnvironmentObject var vm: LoginVM
+    enum FocusedField: String {
+        case email
+        case password
+    }
+    
+    @EnvironmentObject var mainAppFlowVM: MainAppFlowVM
+    @StateObject var vm = LoginVM()
+    @FocusState var focusState: FocusedField?
     
     @State private var showSignUp = false
     
@@ -18,9 +25,12 @@ struct LoginView: View {
                 VStack {
                     TextField("Email", text: $vm.email)
                         .textFieldStyle(.roundedBorder)
+                        .keyboardType(.emailAddress)
+                        .focused($focusState, equals: .email)
 
                     SecureField("Passsword", text: $vm.password)
                         .textFieldStyle(.roundedBorder)
+                        .focused($focusState, equals: .password)
                     
                     Spacer(minLength: 40)
                     
@@ -36,15 +46,25 @@ struct LoginView: View {
                     .environmentObject(SignUpVM())
             })
             .navigationTitle("Sign In")
+            .alert(vm.errorMessage, isPresented: $vm.showingErrorAlert) {
+                Button("OK", role: .cancel) { }
+            }
+            .overlay {
+                if vm.loading {
+                    LoadingView()
+                }
+            }
+            .onChange(of: vm.loginSuccess) { success in
+                mainAppFlowVM.shouldShowLogin = !success
+                focusState = nil
+            }
         }
     }
     
     // MARK: - Views
     @ViewBuilder
     private func SignInButton() -> some View {
-        Button {
-            
-        } label: {
+        Button(action: vm.login) {
             Text("Sign In")
                 .padding(.vertical)
                 .frame(maxWidth: .infinity)

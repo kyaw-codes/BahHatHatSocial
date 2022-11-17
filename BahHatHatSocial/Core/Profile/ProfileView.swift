@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @StateObject private var vm = ProfileVM()
+    @EnvironmentObject var mainAppFlowVM: MainAppFlowVM
+    
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -23,11 +26,15 @@ struct ProfileView: View {
             .navigationTitle("kyaw.codes@gmail.com")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                Button {
-                    
-                } label: {
+                Button(action: vm.logout) {
                     Text("Log out")
                 }
+            }
+            .alert(vm.errorMessage, isPresented: $vm.showingErrorAlert) {
+                Button("OK", role: .cancel) { }
+            }
+            .onChange(of: vm.successfullySignOut) { successfullySignOut in
+                mainAppFlowVM.shouldShowLogin = successfullySignOut
             }
         }
     }

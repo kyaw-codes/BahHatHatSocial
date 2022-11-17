@@ -13,8 +13,30 @@ class LoginVM: ObservableObject {
     @Published var password: String = ""
     @Published var shouldDisableSignInCTA: Bool = true
     
+    @Published var showingErrorAlert = false
+    @Published var errorMessage = ""
+    @Published var loading = false
+    @Published var loginSuccess = false
+
+    private var subscriptionsSet = Set<AnyCancellable>()
+    
     init() {
         validateAndUpdateSignInBtnState()
+    }
+    
+    func login() {
+        loading.toggle()
+        AuthManager().login(email: email, password: password)
+            .sink { [weak self] completion in
+                self?.loading.toggle()
+                switch completion {
+                case .finished: self?.loginSuccess.toggle()
+                case .failure(let err):
+                    self?.showingErrorAlert.toggle()
+                    self?.errorMessage = err.localizedDescription
+                }
+            } receiveValue: { _ in }
+            .store(in: &subscriptionsSet)
     }
     
     private func validateAndUpdateSignInBtnState() {

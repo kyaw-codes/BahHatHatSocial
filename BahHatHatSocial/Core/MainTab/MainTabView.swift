@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MainTabView: View {
+    @EnvironmentObject var mainAppFlowVM: MainAppFlowVM
     @State private var selectedTab = 1
     
     var body: some View {

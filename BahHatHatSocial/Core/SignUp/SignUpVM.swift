@@ -36,8 +36,10 @@ class SignUpVM: ObservableObject {
     }
     
     func signUp() {
+        loading.toggle()
         AuthManager().signup(email: email, password: password, displayName: displayName, profileImage: profileImage?.pngData(), biography: biography)
             .sink { [weak self] completion in
+                self?.loading.toggle()
                 switch completion {
                 case .finished:
                     self?.dismissSelf.toggle()
