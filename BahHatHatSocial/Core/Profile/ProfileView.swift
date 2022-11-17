@@ -75,9 +75,9 @@ struct ProfileView: View {
             Spacer()
             
             VStack {
-                Text("10")
+                Text("\(posts.count)")
                     .font(.title3.bold())
-                Text("Posts")
+                Text("Post(s)")
                     .font(.caption)
             }
             
