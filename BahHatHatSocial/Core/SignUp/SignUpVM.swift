@@ -37,17 +37,24 @@ class SignUpVM: ObservableObject {
     
     func signUp() {
         loading.toggle()
-        AuthManager().signup(email: email, password: password, displayName: displayName, profileImage: profileImage?.pngData(), biography: biography)
-            .sink { [weak self] completion in
-                self?.loading.toggle()
-                switch completion {
-                case .finished:
-                    self?.dismissSelf.toggle()
-                case .failure(let err):
-                    self?.showingErrorAlert.toggle()
-                    self?.errorMessage = err.localizedDescription
-                }
-            } receiveValue: { _ in }
+        
+        AuthManager().signup(
+            email: email,
+            password: password,
+            displayName: displayName,
+            profileImage: profileImage?.pngData(),
+            biography: biography
+        )
+        .sink { [weak self] completion in
+            self?.loading.toggle()
+            switch completion {
+            case .finished:
+                self?.dismissSelf.toggle()
+            case .failure(let err):
+                self?.showingErrorAlert.toggle()
+                self?.errorMessage = err.localizedDescription
+            }
+        } receiveValue: { _ in }
             .store(in: &subscriptionsSet)
     }
     
@@ -66,6 +73,7 @@ class SignUpVM: ObservableObject {
                 switch completion {
                 case .finished: break
                 case .failure(let error):
+                    // Handle error
                     print("\(#file) \(#function): failed to load image: \(error.localizedDescription)")
                 }
             } receiveValue: { [weak self] image in

@@ -32,11 +32,11 @@ struct ProfileView: View {
                 
                 Divider()
                 
-                let sortedPosts = posts
-                    .sorted(by: {
-                        $0.postedDate ?? Date() > $1.postedDate ?? Date()
-                    })
-                    .map(PostVO.init(post:))
+let sortedPosts = posts
+    .sorted(by: {
+        $0.postedDate ?? Date() > $1.postedDate ?? Date()
+    })
+    .map(PostVO.init(post:))
 
                 ForEach(sortedPosts) { post in
                     LazyVGrid(columns: [GridItem(.flexible())]) {

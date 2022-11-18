@@ -22,8 +22,10 @@ struct CircularProfileImageView: View {
             } placeholder: {
                 ZStack {
                     DefaultProfileImageView()
-                    Color.black.opacity(0.7) 
+                    Color.black.opacity(0.7)
+                        .clipShape(Circle())
                     ProgressView()
+                        .tint(.white)
                         .scaleEffect(1.4)
                 }
             }

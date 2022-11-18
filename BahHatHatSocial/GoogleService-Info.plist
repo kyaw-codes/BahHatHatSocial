@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>63733675563-6r6hjmmauntj3nkak957jeblt233keul.apps.googleusercontent.com</string>
+	<string>1005562223510-g0ot6i4u52utlos80s8mgtk460lvogdt.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.63733675563-6r6hjmmauntj3nkak957jeblt233keul</string>
+	<string>com.googleusercontent.apps.1005562223510-g0ot6i4u52utlos80s8mgtk460lvogdt</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAKWNkFqaFY58PaYY7SpX93HQ4NTEkLsAI</string>
+	<string>AIzaSyBSGM9Os3qMM5n4761a0zMnwFFZg5X7h4A</string>
 	<key>GCM_SENDER_ID</key>
-	<string>63733675563</string>
+	<string>1005562223510</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.kyawthemonkey.BahHatHatSocial</string>
 	<key>PROJECT_ID</key>
-	<string>bahhathatsocial</string>
+	<string>bahhathatsocial-1-a2e6d</string>
 	<key>STORAGE_BUCKET</key>
-	<string>bahhathatsocial.appspot.com</string>
+	<string>bahhathatsocial-1-a2e6d.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:63733675563:ios:b33fdbd7fe243a80a69c6e</string>
+	<string>1:1005562223510:ios:6941e6855a8901a3a05bb7</string>
 </dict>
 </plist>

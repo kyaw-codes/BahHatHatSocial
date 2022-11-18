@@ -10,11 +10,11 @@
 		C80D6C54292639AB00ACD31A /* CircularProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80D6C53292639AB00ACD31A /* CircularProfileImageView.swift */; };
 		C80D6C562926569F00ACD31A /* Publisher+AsFuture.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80D6C552926569F00ACD31A /* Publisher+AsFuture.swift */; };
 		C80D6C5829267D7800ACD31A /* PostVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80D6C5729267D7800ACD31A /* PostVM.swift */; };
+		C81AB5C329276041000DC2FD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C81AB5C229276041000DC2FD /* GoogleService-Info.plist */; };
 		C84671A32922637800310117 /* Future+AsyncAwait.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84671A22922637800310117 /* Future+AsyncAwait.swift */; };
 		C84671A929226B6F00310117 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84671A829226B6F00310117 /* HomeView.swift */; };
 		C84671AC292271CE00310117 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84671AB292271CE00310117 /* MainTabView.swift */; };
 		C84671AF2922736200310117 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84671AE2922736200310117 /* ProfileView.swift */; };
-		C84671B1292299C400310117 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C84671B0292299C400310117 /* GoogleService-Info.plist */; };
 		C87C1ABC292136DD0038CAB1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87C1ABB292136DD0038CAB1 /* LoginView.swift */; };
 		C87C1ABE292136F70038CAB1 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87C1ABD292136F70038CAB1 /* LoginVM.swift */; };
 		C87C1AC329213EE50038CAB1 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87C1AC229213EE50038CAB1 /* SignUpView.swift */; };
@@ -70,11 +70,11 @@
 		C80D6C53292639AB00ACD31A /* CircularProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProfileImageView.swift; sourceTree = "<group>"; };
 		C80D6C552926569F00ACD31A /* Publisher+AsFuture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+AsFuture.swift"; sourceTree = "<group>"; };
 		C80D6C5729267D7800ACD31A /* PostVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVM.swift; sourceTree = "<group>"; };
+		C81AB5C229276041000DC2FD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C84671A22922637800310117 /* Future+AsyncAwait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Future+AsyncAwait.swift"; sourceTree = "<group>"; };
 		C84671A829226B6F00310117 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C84671AB292271CE00310117 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		C84671AE2922736200310117 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		C84671B0292299C400310117 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C87C1ABB292136DD0038CAB1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C87C1ABD292136F70038CAB1 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 		C87C1AC229213EE50038CAB1 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpView.swift; path = ../../../../../SignUpView.swift; sourceTree = "<group>"; };
@@ -300,7 +300,7 @@
 				C87C1AC029213E930038CAB1 /* Core */,
 				C8910B7B29209D8600435B32 /* BahHatHatSocialApp.swift */,
 				C8910B7F29209D8800435B32 /* Assets.xcassets */,
-				C84671B0292299C400310117 /* GoogleService-Info.plist */,
+				C81AB5C229276041000DC2FD /* GoogleService-Info.plist */,
 				C8910B8129209D8800435B32 /* Preview Content */,
 			);
 			path = BahHatHatSocial;
@@ -449,7 +449,7 @@
 			files = (
 				C8910B8329209D8800435B32 /* Preview Assets.xcassets in Resources */,
 				C8910B8029209D8800435B32 /* Assets.xcassets in Resources */,
-				C84671B1292299C400310117 /* GoogleService-Info.plist in Resources */,
+				C81AB5C329276041000DC2FD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

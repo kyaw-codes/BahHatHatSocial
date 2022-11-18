@@ -17,7 +17,7 @@ final class PostManager {
     
     private var subscriptionSets = Set<AnyCancellable>()
     
-    func createPost(text: String, image: Data?) -> AnyPublisher<BHHPost, Error> {
+    func createPost(text: String, image: Data?) -> Future<BHHPost, Error> {
         let imagePath = "postImages/\(UUID().uuidString).png"
         
         let currentUser = authManager.currentUser().replaceError(with: nil).share()
@@ -43,10 +43,12 @@ final class PostManager {
                     try await ref.getDocument(as: BHHPost.self)
                 }
             }
-            .eraseToAnyPublisher()
+            .asFuture()
     }
 
     func deletePost(id: String) -> Future<Void, Error> {
         return db.collection("posts").document(id).delete().asFuture()
     }
 }
+
+

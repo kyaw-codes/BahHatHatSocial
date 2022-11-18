@@ -14,7 +14,8 @@ final class PhotoUploadManager {
     private let storage = Storage.storage()
     private let subscriptionsSet = Set<AnyCancellable>()
     
-    func upload(photoData data: Data?, withPath filePath: String) -> AnyPublisher<String, Never> {
+    func upload(photoData data: Data?,
+                withPath filePath: String) -> AnyPublisher<String, Never> {
         guard let data = data else {
             return Just("").eraseToAnyPublisher()
         }
